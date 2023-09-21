@@ -1,0 +1,310 @@
+/******** BASIC RESET *********/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav ul, nav ol, li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+input{
+    outline: none;
+    text-align: right;
+    background-color: var(--Very-light-grayish-cyan);
+    cursor: pointer;
+    border: 1px solid var(--White);
+    color: var(--Very-dark-cyan);
+    padding: 10px;
+    font-weight: 700;
+    width: 100%;
+}
+
+input:focus{
+    border: 2px solid var(--Strong-cyan);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px
+}
+
+/******** TYPOGRAPHY ********/
+body{
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    position: relative;
+    background-color: var(--Light-grayish-cyan);
+}
+
+/********* PAGE SECTION *****/
+
+#page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/********* HEADER SECTION ******/
+
+header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/****** CONATINER SECTION ******/
+
+.container{
+    background-color: var(--White);
+    padding: 30px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 850px;
+}
+
+/******** INPUT-DETAILS-CONTAINER *****/
+
+.input-details-cont .input-cont{
+    padding-bottom: 40px;
+    position: relative;
+
+}
+
+.input-details-cont .input-cont h3, 
+.input-details-cont .select-tip-cont h3,
+.input-details-cont .People h3{
+    color: var(--Dark-grayish-cyan);
+    
+}
+
+.input-details-cont .input-cont form,
+.input-details-cont .select-tip-cont form,
+.input-details-cont .People form{
+    position: relative;
+    padding-top: 20px;
+}
+
+.input-details-cont .input-cont form input,
+.input-details-cont .People form input{
+    position: relative;
+    
+    
+}
+
+.input-details-cont .input-cont form label img,
+.input-details-cont .People form label img{
+    position: absolute;
+    margin-top: 10px;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+}
+
+/********* select-tip-cont **********/
+
+.input-details-cont .select-tip-cont{
+    padding-bottom: 40px;
+    position: relative;
+}
+
+
+.input-details-cont .select-tip-cont form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-details-cont .select-tip-cont form button,
+.input-details-cont .select-tip-cont form input{
+    flex: 1;
+    width: 100%;
+}
+
+.input-details-cont .select-tip-cont form button{
+    border: 1px solid var(--Very-dark-cyan);
+    background-color: var(--Very-dark-cyan);
+    color: white;
+}
+
+.input-details-cont .select-tip-cont form button:hover{
+    border: 1px solid var(--Light-grayish-cyan);
+    background-color: var(--Light-grayish-cyan) ;
+}
+
+/******* People ******/
+
+.input-details-cont .People{
+    padding-top: 10px;
+}
+
+.input-details-cont .input-cont p, 
+.input-details-cont .select-tip-cont p,
+.input-details-cont .People p{
+    font-size: 14px;
+    color: red;
+    padding-top: 10px;
+    
+}
+
+.error{
+    display: none;
+}
+
+
+/********** RESULT CONATINER *****/
+
+.result{
+    background-color: var(--Very-dark-cyan);
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.result h3{
+    color: var(--White);
+}
+
+.result p{
+    color: var(--Dark-grayish-cyan);
+}
+
+.result .display-result .tip-amount,
+.result .display-result .total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20px;
+    gap: 10px; 
+
+}
+
+.result .display-result .tip-amount div:nth-child(2),
+.result .display-result .total div:nth-child(2){
+    grid-column:  2; 
+    text-align: right;
+    color: var(--Strong-cyan);
+}
+
+.result button{
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid var(--Strong-cyan);
+    background-color: var(--Strong-cyan);
+    color: hsl(189, 9%, 28%);
+    font-weight: 700;
+}
+
+.result button:hover{
+    border: 1px solid var(--Light-grayish-cyan);
+    background-color: var(--Light-grayish-cyan);
+}
+
+
+
+
+
+
+
+/******* TABLET SCREEN ******/
+
+@media only screen and (min-width: 760px){
+
+}
+
+
+/****** LARGE TABLET SCREEN *****/
+
+@media only screen and (min-width: 1020px){
+
+    
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 40px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        
+    }
+
+    .input-details-cont .select-tip-cont form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .input-details-cont .People h3{
+        display: inline-block;
+    }
+
+    
+    .input-details-cont .People p{
+        float: right;
+    }
+
+    .result{
+        margin-top: 0;
+    }
+
+    .result button{
+        position: relative;
+        top: 30%;
+    }
+}
+
+/****** DESKTOP SCREEN ******/
+
+@media only screen and (min-width: 1200px){
+
+}
+
+
+/***** LARGE DESKTOP SCREEN *****/
+
+@media only screen and (min-width: 1500px){
+
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
